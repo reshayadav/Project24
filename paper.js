@@ -10,7 +10,7 @@ class Paper{
       this.x=x;
       this.r=r;
       this.body = Bodies.circle(this.x,this.y,this.r/2,options);
-      World .add(world,this.body);
+      World.add(myWorld,this.body);
 
     }
     display(){

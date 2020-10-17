@@ -1,18 +1,21 @@
-class Dustbin{
+class Ground{
     constructor(x,y,w,h){
+        var options={
+            isStatic:true
+        }
 
-        this.body=Bodies.rectangle(x,y,w,h);
+        this.body = Bodies.rectangle(x,y,w,h,options);
+        World.add(myWorld,this.body);
         this.width=w;
         this.height=h;
-        World.add(myWorld,this.body);
-
     }
+
     display(){
+
         var pos= this.body.position;
         rectMode(CENTER);
-        fill (500);
+        fill ("yellow");
         rect(pos.x,pos.y,this.width,this.height);
-
-
+        
     }
 }
