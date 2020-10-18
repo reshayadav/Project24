@@ -10,7 +10,7 @@ class Dustbin{
     display(){
         var pos= this.body.position;
         rectMode(CENTER);
-        fill (500);
+        fill (255,255,255);
         rect(pos.x,pos.y,this.width,this.height);
 
 

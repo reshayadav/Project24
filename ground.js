@@ -14,7 +14,7 @@ class Ground{
 
         var pos= this.body.position;
         rectMode(CENTER);
-        fill ("yellow");
+        fill (255,255,0);
         rect(pos.x,pos.y,this.width,this.height);
         
     }
