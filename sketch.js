@@ -23,10 +23,10 @@ function setup() {
 
 
 	//Create the Bodies Here.
-	paper = new Paper(100,200,20);
-	board1 =new Dustbin(550,575,200,30);
-	board2 =new Dustbin(455,560,20,100);
-	board3 =new Dustbin(650,560,20,100);
+	paper = new Paper(100,200,15);
+	board1 =new Dustbin(550,555,200,30);
+	board2 =new Dustbin(455,530,20,100);
+	board3 =new Dustbin(650,530,20,100);
 	ground =new Ground(400,580,800,20);
 
 
