@@ -9,19 +9,18 @@ class Paper{
       this.y=y;
       this.x=x;
       this.r=r;
-      this.body = Bodies.circle(this.x,this.y,this.r/2,options);
+      this.body = Bodies.circle(this.x,this.y,this.r,options);
       World.add(myWorld,this.body);
 
     }
     display(){
         var paperos = this.body.position;
-        push ();
-        translate(paperos.x,paperos.y);
-        rectMode(CENTER);
+      
+        ellipseMode(RADIUS);
         strokeWeight(3);
         fill (255,0,255);
-        ellipse(0,0,this.r,this.r);
-        pop ();
+        ellipse(paperos.x,paperos.y,this.r);
+       
         
     }
 }

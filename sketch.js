@@ -23,7 +23,7 @@ function setup() {
 
 
 	//Create the Bodies Here.
-	paper = new Paper(100,560,25,25);
+	paper = new Paper(100,200,20);
 	board1 =new Dustbin(550,575,200,30);
 	board2 =new Dustbin(455,560,20,100);
 	board3 =new Dustbin(650,560,20,100);
@@ -46,8 +46,8 @@ function draw() {
   board3.display();
   ground.display();
 
-  keyPressed();
-  drawSprites();
+ 
+  
  
 }
 
@@ -55,7 +55,7 @@ function draw() {
 function keyPressed(){
 	if(keyCode === UP_ARROW){
 
-		Matter.Body.applyForce(paper.body,paper.body.position,{x:85,y:85});
+		Matter.Body.applyForce(paper.body,paper.body.position,{x:30,y:-30});
 
 	}
 }
