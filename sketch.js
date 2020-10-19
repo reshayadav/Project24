@@ -5,8 +5,7 @@ const Bodies = Matter.Bodies;
 const Body = Matter.Body;
 var board1,board2,board3;
 var paper;
-var ground
-
+var ground;
 var myEngine,myWorld;
 
 function preload()
@@ -24,10 +23,10 @@ function setup() {
 
 
 	//Create the Bodies Here.
-	paper = new Paper(100,500,20,20);
-	board1 =new Dustbin(500,500,200,30);
-	board2 =new Dustbin(400,510,20,100);
-	board3 =new Dustbin(600,520,20,100);
+	paper = new Paper(100,560,25,25);
+	board1 =new Dustbin(550,575,200,30);
+	board2 =new Dustbin(455,560,20,100);
+	board3 =new Dustbin(650,560,20,100);
 	ground =new Ground(400,580,800,20);
 
 
@@ -46,9 +45,17 @@ function draw() {
   board2.display();
   board3.display();
   ground.display();
+
+  keyPressed();
   drawSprites();
  
 }
 
 
+function keyPressed(){
+	if(keyDown === UP_ARROW){
 
+		Matter.Body.applyForce(paper.body,paper.body,550,{x:85,y:85});
+
+	}
+}
